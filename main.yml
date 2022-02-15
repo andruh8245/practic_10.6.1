@@ -1,0 +1,12 @@
+---
+- name: Install vsftpd
+  apt:
+    name: vsftpd
+    update_cache: yes
+    state: present
+ 
+- name: Start service
+  service:
+    name: vsftpd
+    state: started
+    enabled: yes
